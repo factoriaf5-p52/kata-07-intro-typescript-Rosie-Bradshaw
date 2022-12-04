@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "calculateBmi": "node bmiCalculator.ts",
-    "exerciseCalculator": "note exerciseCalculator.ts"
+    "calculateBmi": "ts-node bmiCalculator.ts",
+    "exerciseCalculator": "ts-node exerciseCalculator.ts"
   },
   "repository": {
     "type": "git",
