@@ -4,10 +4,10 @@
   "description": "https://fullstackopen.com/en/part9/first_steps_with_type_script#exercises-9-1-9-3",
   "main": "index.js",
   "scripts": {
-    "build":"tsc",
+    "build": "tsc",
     "test": "jest",
-    "calculateBmi": "ts-node bmiCalculator.ts",
-    "exerciseCalculator": "ts-node exerciseCalculator.ts"
+    "calculateBmi": "ts-node src/bmiCalculator.ts",
+    "exerciseCalculator": "ts-node src/exerciseCalculator.ts"
   },
   "repository": {
     "type": "git",

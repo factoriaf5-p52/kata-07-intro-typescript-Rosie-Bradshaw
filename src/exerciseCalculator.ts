@@ -14,7 +14,7 @@ let target:number = 2;
 
 //period length
 let periodLength = trainingHoursArray.length;
-console.log(periodLength);
+//console.log(periodLength);
 
 //training days
 function trainingDays(trainingHoursArray:number[]){
@@ -24,7 +24,7 @@ function trainingDays(trainingHoursArray:number[]){
             totalTrainingDays += 1;
         }
     }
-    console.log(totalTrainingDays);  
+    //console.log(totalTrainingDays);  
     return totalTrainingDays;
 }
 trainingDays(trainingHoursArray);
@@ -41,7 +41,7 @@ function periodTrainingHours(trainingHoursArray:number[]){
 periodTrainingHours(trainingHoursArray);
 
 let average = periodTrainingHours(trainingHoursArray)/periodLength;
-console.log(average);
+//console.log(average);
 
 
 //success
@@ -51,7 +51,7 @@ function success(trainingHoursArray:number[], target:number):boolean{
     
 };
 success(trainingHoursArray, target);
-console.log(success(trainingHoursArray, target));
+//console.log(success(trainingHoursArray, target));
 
 //rating
 function rating(trainingHoursArray:number[], target:number):number{
@@ -60,7 +60,7 @@ function rating(trainingHoursArray:number[], target:number):number{
     else return 1;
 };
 rating(trainingHoursArray, target);
-console.log(rating(trainingHoursArray, target));
+//console.log(rating(trainingHoursArray, target));
 
 
 //rating description
@@ -71,15 +71,22 @@ function ratingDescription(trainingHoursArray:number[], target:number):string{
     else return 'undefined';
 }
 ratingDescription(trainingHoursArray, target);
-console.log(ratingDescription(trainingHoursArray, target));
+//console.log(ratingDescription(trainingHoursArray, target));
 
 
 //calculate exercises
 function calculateExercises (trainingHoursArray:number[], target:number) : ResultObject {
-    this.periodLength=periodLength, this.trainingDays=trainingDays, this.success=success, this.rating=rating, this.ratingDescription=ratingDescription, this.target=target, this.average=average};
-    console.log(calculateExercises(trainingHoursArray, target));
+    
+    return {periodLength:trainingHoursArray.length, 
+        trainingDays: trainingDays(trainingHoursArray), 
+        success: success(trainingHoursArray, target), 
+        rating: rating(trainingHoursArray, target), 
+        ratingDescription: ratingDescription(trainingHoursArray, target), 
+        target: target, 
+        average: periodTrainingHours(trainingHoursArray)/periodLength}
+    }
 
-calculateExercises([3, 0, 2, 4.5, 0, 3, 1], 2);
+console.log(calculateExercises([3, 0, 2, 4.5, 0, 3, 1], 2));
 
 
 
