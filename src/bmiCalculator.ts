@@ -21,6 +21,10 @@
 
 
 //A partir de aquí es lo que hice yo 
+// console.log(process.argv); 
+let args = process.argv.slice(2);
+let height = Number(args[0]);
+let weight = Number(args[1]);
 
 export let calculateBmi:any = (height:number, weight:number) => {
 calculateBmi = weight/((height/100)*(height/100));
@@ -37,5 +41,5 @@ else if (calculateBmi>25){
 }
 };
 
-console.log(calculateBmi(180, 74));
+console.log(calculateBmi(height, weight));
 

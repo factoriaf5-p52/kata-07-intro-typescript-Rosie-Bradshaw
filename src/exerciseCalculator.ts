@@ -77,7 +77,7 @@ ratingDescription(trainingHoursArray, target);
 //calculate exercises
 function calculateExercises (trainingHoursArray:number[], target:number) : ResultObject {
     
-    return {periodLength:trainingHoursArray.length, 
+    return {periodLength: trainingHoursArray.length, 
         trainingDays: trainingDays(trainingHoursArray), 
         success: success(trainingHoursArray, target), 
         rating: rating(trainingHoursArray, target), 
